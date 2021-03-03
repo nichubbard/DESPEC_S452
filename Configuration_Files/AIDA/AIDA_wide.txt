@@ -4,8 +4,9 @@
 #---------------------------
 # Configuration
 #---------------------------
-FEEs: 12
-DSSDs: 3
+FEEs: 16
+DSSDs: 2
+Wide: true
 
 #---------------------------
 # Options
@@ -34,22 +35,23 @@ FrontBackEnergyL: 350
 DSSD: 1
 - Top: 2
 - Bottom: 4
-- Left: 3
-- Right: 1
+- LeftLeft: 11
+- LeftRight: 9
+- CentreLeft: 3
+- CentreRight: 1
+- RightLeft: 12
+- RightRight: 10
 - X: Junction
 - Y: Ohmic
 DSSD: 2
 - Top: 6
 - Bottom: 8
-- Left: 7
-- Right: 5
-- X: Junction
-- Y: Ohmic
-DSSD: 3
-- Top: 10
-- Bottom: 12
-- Left: 11
-- Right: 9
+- LeftLeft: 15
+- LeftRight: 13
+- CentreLeft: 7
+- CentreRight: 5
+- RightLeft: 16
+- RightRight: 14
 - X: Junction
 - Y: Ohmic
 
@@ -61,7 +63,3 @@ Scalers:
 - 2: Pulser Copy
 - 3: Time Machine Original
 - 4: Time Machine Delayed
-- 5: SC42 L
-- 6: SC42 R
-- 7: SC41 L
-- 8: SC41 R

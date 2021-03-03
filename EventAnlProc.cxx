@@ -1098,7 +1098,8 @@ void EventAnlProc::ProcessAida(EventUnpackStore* pInputMain, EventAnlStore* pOut
         decayEvents--;
         pulserEvents++;
 #ifdef AIDA_PULSER_ALIGN
-        if(channelM > 750)
+        if(channelM > 700)
+        //if(pInputMain->fTrigger == 3)
         {
           std::cout << "Identified a pulser event!" << std::endl;
           std::vector<int> offsets;

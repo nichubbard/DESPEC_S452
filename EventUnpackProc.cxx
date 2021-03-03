@@ -2197,13 +2197,18 @@ void EventUnpackProc::Fill_AIDA_Histos() {
     if (module == "") continue;
     int i = sv.Module + 1;
     // Pulser event
-    int second = (sv.Time / 1000000000ULL) % 3600;
+    int second = (sv.Time / 1000000000ULL);
     if (second == aida_scaler_cur_sec[i])
     {
       aida_scaler_queue[i].front() += 1;
     }
     else
     {
+      if (aida_scaler_cur_sec[i] != -1)
+      {
+        int diff = second - aida_scaler_cur_sec[i];
+        while (diff-- > 1) aida_scaler_queue[i].push_front(0);
+      }
       aida_scaler_queue[i].push_front(1);
       while (aida_scaler_queue[i].size() > 3600) aida_scaler_queue[i].pop_back();
     }

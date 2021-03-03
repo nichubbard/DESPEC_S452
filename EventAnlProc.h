@@ -39,6 +39,10 @@
 #define bPLAS2_TAMEX_NUM 3
 #define bPLAS_TAMEX_ID 2
 #define FAT_TAMEX_ID 0
+
+// Uncomment this to align the AIDA ASICs with a pulser
+//  Only needed if the ASICs didn't align properly
+//#define AIDA_PULSER_ALIGN
   
 
 class EventAnlStore;
